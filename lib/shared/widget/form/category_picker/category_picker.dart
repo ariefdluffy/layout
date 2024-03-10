@@ -60,6 +60,7 @@ class _QCategoryPickerState extends State<QCategoryPicker> {
           style: TextStyle(
             fontSize: 12.0,
             color: Theme.of(context).textTheme.bodySmall?.color,
+            // color: Colors.white,
           ),
         ),
         SizedBox(
@@ -137,7 +138,8 @@ class _QCategoryPickerState extends State<QCategoryPicker> {
                                 ? null
                                 : ElevatedButton.styleFrom(
                                     backgroundColor:
-                                        Theme.of(context).disabledColor,
+                                        // Theme.of(context).disabledColor,
+                                        Colors.grey[100],
                                     elevation: 0.0,
                                   ),
                             onPressed: () => updateIndex(index),

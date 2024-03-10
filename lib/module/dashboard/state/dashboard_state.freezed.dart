@@ -18,6 +18,8 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$DashboardState {
   int get currentIndex => throw _privateConstructorUsedError;
   set currentIndex(int value) => throw _privateConstructorUsedError;
+  List<dynamic> get products => throw _privateConstructorUsedError;
+  set products(List<dynamic> value) => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $DashboardStateCopyWith<DashboardState> get copyWith =>
@@ -30,7 +32,7 @@ abstract class $DashboardStateCopyWith<$Res> {
           DashboardState value, $Res Function(DashboardState) then) =
       _$DashboardStateCopyWithImpl<$Res, DashboardState>;
   @useResult
-  $Res call({int currentIndex});
+  $Res call({int currentIndex, List<dynamic> products});
 }
 
 /// @nodoc
@@ -47,12 +49,17 @@ class _$DashboardStateCopyWithImpl<$Res, $Val extends DashboardState>
   @override
   $Res call({
     Object? currentIndex = null,
+    Object? products = null,
   }) {
     return _then(_value.copyWith(
       currentIndex: null == currentIndex
           ? _value.currentIndex
           : currentIndex // ignore: cast_nullable_to_non_nullable
               as int,
+      products: null == products
+          ? _value.products
+          : products // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>,
     ) as $Val);
   }
 }
@@ -65,7 +72,7 @@ abstract class _$$DashboardStateImplCopyWith<$Res>
       __$$DashboardStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int currentIndex});
+  $Res call({int currentIndex, List<dynamic> products});
 }
 
 /// @nodoc
@@ -80,12 +87,17 @@ class __$$DashboardStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? currentIndex = null,
+    Object? products = null,
   }) {
     return _then(_$DashboardStateImpl(
       currentIndex: null == currentIndex
           ? _value.currentIndex
           : currentIndex // ignore: cast_nullable_to_non_nullable
               as int,
+      products: null == products
+          ? _value.products
+          : products // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>,
     ));
   }
 }
@@ -93,15 +105,45 @@ class __$$DashboardStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$DashboardStateImpl implements _DashboardState {
-  _$DashboardStateImpl({this.currentIndex = 0});
+  _$DashboardStateImpl(
+      {this.currentIndex = 0,
+      this.products = const [
+        {
+          "id": 1,
+          "photo":
+              "https://ik.imagekit.io/4x8ncuvuzb/assets-img/img_3.jpg?updatedAt=1710059861691",
+          "name_menu": "e-Learning BPSDM"
+        },
+        {
+          "id": 2,
+          "photo":
+              "https://ik.imagekit.io/4x8ncuvuzb/assets-img/img_learn.jpg?updatedAt=1710059861600",
+          "name_menu": "Tentang BPSDM"
+        },
+        {
+          "id": 3,
+          "photo":
+              "https://ik.imagekit.io/4x8ncuvuzb/assets-img/img_2.jpg?updatedAt=1710059861286",
+          "name_menu": "Berita BPSDM"
+        },
+        {
+          "id": 4,
+          "photo":
+              "https://ik.imagekit.io/4x8ncuvuzb/assets-img/img_dis.jpg?updatedAt=1710059861207",
+          "name_menu": "Registrasi Pelatihan"
+        }
+      ]});
 
   @override
   @JsonKey()
   int currentIndex;
+  @override
+  @JsonKey()
+  List<dynamic> products;
 
   @override
   String toString() {
-    return 'DashboardState(currentIndex: $currentIndex)';
+    return 'DashboardState(currentIndex: $currentIndex, products: $products)';
   }
 
   @JsonKey(ignore: true)
@@ -113,11 +155,15 @@ class _$DashboardStateImpl implements _DashboardState {
 }
 
 abstract class _DashboardState implements DashboardState {
-  factory _DashboardState({int currentIndex}) = _$DashboardStateImpl;
+  factory _DashboardState({int currentIndex, List<dynamic> products}) =
+      _$DashboardStateImpl;
 
   @override
   int get currentIndex;
   set currentIndex(int value);
+  @override
+  List<dynamic> get products;
+  set products(List<dynamic> value);
   @override
   @JsonKey(ignore: true)
   _$$DashboardStateImplCopyWith<_$DashboardStateImpl> get copyWith =>
